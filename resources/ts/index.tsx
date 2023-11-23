@@ -1,12 +1,14 @@
-import React from "react";
 import { createRoot } from "react-dom/client";
+import { ThemeProvider } from "@mui/material/styles";
 import App from "./App";
+import theme from "./theme";
+import "../sass/app.scss";
 
 const container = document.getElementById("app");
 const root = createRoot(container!);
 
 root.render(
-    <div className="text-red">
+    <ThemeProvider theme={theme}>
         <App />
-    </div>
+    </ThemeProvider>
 );
