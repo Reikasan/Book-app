@@ -18,19 +18,19 @@ declare module '@mui/material/styles' {
         secondaryButton: true;
     }
   }
-  
+
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#F76F72',
+            main: '#F1D302',
         },
         secondary: {
             main: '#FDFFFC',
         },
         primaryButton: {
-            main: '#F76F72',
-            light: '#FCA1A1',
-            dark: '#FA4245',
+            main: '#F1D302',
+            light: '#F5E255',
+            dark: '#E2C402',
             contrastText: '#FDFFFC',
         },
         secondaryButton: {
@@ -45,9 +45,13 @@ const theme = createTheme({
           styleOverrides: {
             root: {
                 borderRadius: '0px',
+                boxShadow: 'none',
             },
             outlined: {
-              borderColor: '#F76F72', 
+              borderColor: '#F1D302',
+              ":hover" : { 
+                boxShadow: "0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)",
+                backgroundColor: "#FDFFFC", }
             },
           },
         },
