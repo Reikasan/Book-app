@@ -1,17 +1,16 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import WelcomePage from "./Pages/welcome-page";
+import GestPage from "./Pages/gest-page";
 
 const App: React.FC = () => {
-  useEffect(() => {
-    const fecthFromLaravel = async () => {
-        const res = await axios.get("/api/hello");
-        alert(res.data.hello);
-    };
-    fecthFromLaravel();
-  }, []);
-
-  return (
-    <div className="App"></div>
+  return ( 
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/gest" element={<GestPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
