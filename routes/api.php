@@ -14,8 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::group(['middleware'=> 'api'], function(){
+    Route::get('books', 'App\Http\Controllers\Api\BookController@index');
+    // Route::resource('tags', 'App\Http\Controllers\Api\TagController');
+    // Route::resource('review-tags', 'App\Http\Controllers\Api\ReviewTagController');
 });
 
 Route::get('/hello', function (Request $request) {

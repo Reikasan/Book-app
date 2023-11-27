@@ -13,7 +13,8 @@
     "published_date": "2019-02-11",
     "category_id": 1,
     "google_book_id": "moiNDwAAQBAJ",
-    "google_book_link": "http://books.google.de/books?id=moiNDwAAQBAJ&pg=PA5&dq=Me+time&hl=&cd=1&source=gbs_api"
+    "google_book_link": "http://books.google.de/books?id=moiNDwAAQBAJ&pg=PA5&dq=Me+time&hl=&cd=1&source=gbs_api",
+    "created_at": "2021-11-01 15:00:00.00"
   },
   {
     "title": "Me Time",
@@ -29,7 +30,8 @@
     "published_date": "2021-01-05",
     "category_id": 18,
     "google_book_id": "crITEAAAQBAJ",
-    "google_book_link": "http://books.google.de/books?id=crITEAAAQBAJ&pg=PA3&dq=Me+time&hl=&cd=2&source=gbs_api"
+    "google_book_link": "http://books.google.de/books?id=crITEAAAQBAJ&pg=PA3&dq=Me+time&hl=&cd=2&source=gbs_api",
+    "created_at": "2021-12-01 15:00:00.00"
   },
   {
     "title": "Me Time",
@@ -45,7 +47,8 @@
     "published_date": "2016-12-25",
     "category_id": 2,
     "google_book_id": "lEvQDQAAQBAJ",
-    "google_book_link": "http://books.google.de/books?id=lEvQDQAAQBAJ&pg=PA10&dq=Me+time&hl=&cd=3&source=gbs_api"
+    "google_book_link": "http://books.google.de/books?id=lEvQDQAAQBAJ&pg=PA10&dq=Me+time&hl=&cd=3&source=gbs_api",
+    "created_at": "2022-12-01 15:00:00.00"
   },
   {
     "title": "Me Time",
@@ -60,7 +63,8 @@
     "published_date": "2006-08-31",
     "category_id": 5,
     "google_book_id": "0HXZ-yl1eacC",
-    "google_book_link": "http://books.google.de/books?id=0HXZ-yl1eacC&pg=RA1-PA145&dq=Me+time&hl=&cd=4&source=gbs_api"
+    "google_book_link": "http://books.google.de/books?id=0HXZ-yl1eacC&pg=RA1-PA145&dq=Me+time&hl=&cd=4&source=gbs_api",
+    "created_at": "2023-11-21 15:00:00.00"
   },
   {
     "title": "5-Minute ME Time",
@@ -76,7 +80,8 @@
     "published_date": "2022-03-31",
     "category_id": 16,
     "google_book_id": "xCNnEAAAQBAJ",
-    "google_book_link": "http://books.google.de/books?id=xCNnEAAAQBAJ&pg=PA25&dq=Me+time&hl=&cd=5&source=gbs_api"
+    "google_book_link": "http://books.google.de/books?id=xCNnEAAAQBAJ&pg=PA25&dq=Me+time&hl=&cd=5&source=gbs_api",
+    "created_at": "2023-10-01 15:00:00.00"
   },
   {
     "title": "Chicken Soup for the Soul: Making Me Time",
@@ -92,7 +97,8 @@
     "published_date": "2021-02-16",
     "category_id": 12,
     "google_book_id": "qvvtDwAAQBAJ",
-    "google_book_link": "http://books.google.de/books?id=qvvtDwAAQBAJ&pg=PT41&dq=Me+time&hl=&cd=6&source=gbs_api"
+    "google_book_link": "http://books.google.de/books?id=qvvtDwAAQBAJ&pg=PT41&dq=Me+time&hl=&cd=6&source=gbs_api",
+    "created_at": "2023-09-01 15:00:00.00"
   },
   {
     "title": "Will You Love Me? Time Will Show",
@@ -107,7 +113,8 @@
     "published_date": "1853",
     "category_id": 9,
     "google_book_id": "RjW1dSnC69QC",
-    "google_book_link": "http://books.google.de/books?id=RjW1dSnC69QC&pg=PP4&dq=Me+time&hl=&cd=7&source=gbs_api"
+    "google_book_link": "http://books.google.de/books?id=RjW1dSnC69QC&pg=PP4&dq=Me+time&hl=&cd=7&source=gbs_api",
+    "created_at": "2023-08-01 15:00:00.00"
   },
   {
     "title": "Immer locker bleiben, Mama! Mit Achtsamkeit zu mehr Me Time, Entspannung und Glück im Familienalltag",
@@ -122,7 +129,8 @@
     "published_date": "2021-11",
     "category_id": 7,
     "google_book_id": "krezzgEACAAJ",
-    "google_book_link": "http://books.google.de/books?id=krezzgEACAAJ&dq=Me+time&hl=&cd=8&source=gbs_api"
+    "google_book_link": "http://books.google.de/books?id=krezzgEACAAJ&dq=Me+time&hl=&cd=8&source=gbs_api",
+    "created_at": "2023-07-01 15:00:00.00"
   },
   {
     "title": "Advances in Multimedia Modeling",
@@ -138,7 +146,8 @@
     "published_date": "2007-07-05",
     "category_id": 3,
     "google_book_id": "8dFrCQAAQBAJ",
-    "google_book_link": "http://books.google.de/books?id=8dFrCQAAQBAJ&pg=PA564&dq=Me+time&hl=&cd=9&source=gbs_api"
+    "google_book_link": "http://books.google.de/books?id=8dFrCQAAQBAJ&pg=PA564&dq=Me+time&hl=&cd=9&source=gbs_api",
+    "created_at": "2023-06-01 15:00:00.00"
   },
   {
     "title": "EVELINA",
@@ -151,6 +160,7 @@
     "publisher": "David Gomadza",
     "category_id": 9,
     "google_book_id": "C3P3DwAAQBAJ",
-    "google_book_link": "http://books.google.de/books?id=C3P3DwAAQBAJ&pg=PT422&dq=Me+time&hl=&cd=10&source=gbs_api"
+    "google_book_link": "http://books.google.de/books?id=C3P3DwAAQBAJ&pg=PT422&dq=Me+time&hl=&cd=10&source=gbs_api",
+    "created_at":"2023-09-11 15:00:00"
   }
 ] 
