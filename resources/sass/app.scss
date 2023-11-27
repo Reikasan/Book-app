@@ -1,3 +1,107 @@
-.text-red {
-    color: red;
+$pink: #F76F72;
+$white: #FDFFFC;
+$darkColor: #020100;
+$blue: #235789;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav {
+    position: relative;
+
+    &-logo {
+        display: flex;
+        align-items: center;
+        height: 100px; 
+        overflow: hidden;
+
+        img {
+            height: 200px;
+        }
+    }
+    &-right {
+        position: absolute;
+        right: 3vw;
+        top: 20px;
+    }
+}
+
+.sidebar-menu {
+    width: 50px;
+    position: fixed;
+    top: calc(50% - 50px);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    border: solid 3px $pink;
+    border-right: none;
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: $blue;
+    align-items: center;
+
+    svg {
+        width: 1.5em;
+        height: 1.5em;
+        color: $pink;
+    }
+}
+
+.hero-section {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    background: url('/images/books-and-cat.jpeg') no-repeat center center/cover;
+
+    h1 {
+        color: $white;
+        font-size: 3rem;
+        text-shadow: 2px 2px  $pink;
+    }
+
+    .login-section {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .divider {
+        margin: 30px 0;
+        width: 100%;
+        position: relative;
+        border-bottom: solid 1px #ddd;  
+
+        p {
+            background-color: $white;
+            position: absolute;
+            top: -8px;
+            right: calc(50% - 20px);
+            text-align: center;
+            width: 40px;
+        }
+    }
+
+    .signup-section {
+        display: flex;
+        margin-top: 40px;
+    }
+}
+
+.book-search {
+    &-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-results {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
