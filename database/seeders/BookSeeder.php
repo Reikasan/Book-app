@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Book;
+use Illuminate\Support\Facades\DB;
 
 class BookSeeder extends Seeder
 {
@@ -13,8 +13,11 @@ class BookSeeder extends Seeder
      */
     public function run(): void
     {
-        Book::factory() 
-            ->count(10)
-            ->create();
+        $json = file_get_contents(database_path('seeders/book-data.json'));
+        $data = json_decode($json, true);
+
+        foreach ($data as $book) {
+            DB::table('books')->insert($book);
+        }
     }
 }

@@ -9,6 +9,6 @@ class ReviewTag extends Model
 {
     use HasFactory;
 
-    protected $table = 'review_tag';
+    protected $table = 'review_tags';
     public $timestamps = true;
 }

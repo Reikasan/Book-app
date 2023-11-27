@@ -17,17 +17,18 @@ return new class extends Migration
             $table->string('sub_title', 255)->nullable();
             $table->string('authors', 100);
             $table->text('description');
-            $table->string('image_link', 100);
+            $table->string('image_link', 255);
             $table->string('isbn', 100)->nullable()->unique();
             $table->string('isbn13', 100)->nullable()->unique();
             $table->string('language', 100);
             $table->integer('page_count');
             $table->string('publisher', 100);
-            $table->string('published_date', 100);
+            $table->string('published_date', 100)->nullable();
             $table->foreignId('category_id')->constrained()
                                             ->onDelete('cascade')
                                             ->onUpdate('cascade');
-            $table->bigInteger(('google_book_id'))->unique();
+            $table->string(('google_book_id'))->unique();
+            $table->string('google_book_link', 255);
             $table->timestamps();
         });
     }

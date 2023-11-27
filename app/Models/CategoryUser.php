@@ -9,6 +9,6 @@ class CategoryUser extends Model
 {
     use HasFactory;
 
-    protected $table = 'category_user';
+    protected $table = 'category_users';
     public $timestamps = true;
 }
