@@ -55,6 +55,15 @@ const theme = createTheme({
             },
           },
         },
+        MuiCardActions: { 
+          styleOverrides: {
+            root: {
+              "& > :not(:first-of-type)": {
+                  marginLeft: "0px",
+              },
+            },
+          },
+        },
       },
 });
 

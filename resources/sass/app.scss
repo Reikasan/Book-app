@@ -50,6 +50,7 @@ a {
 }
 
 .sidebar-menu {
+    z-index: 100;
     width: 5vw;
     position: fixed;
     top: calc(50% - 50px);
@@ -126,9 +127,6 @@ a {
 }
 
 .book-info {
-    margin-bottom: 15px;
-    
-
     h3 {
         height: 45px;
     }
@@ -136,10 +134,14 @@ a {
 
 .list {
     margin-top: 50px;
-    height: 480px;
+    height: 500px;
     overflow: hidden;
     text-overflow: ellipsis;
     position: relative;
+
+    &.added-recently {
+        height: 560px;
+    }
 
     &-container {
         display: flex;
@@ -148,38 +150,45 @@ a {
         align-items: center;
     }
 
-    .review-card {
+    .card {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 10px;
+        padding: 20px 10px;
+        border-radius: 0;
+
+        &.review-thumbnail-card {
+            height: fit-content;
+
+            .btn-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .btn {
+            width: 150px;
+        }
+
         > div {
             width: 100%;
         }
     }
 
-    .rating-container {
+    .rating {
+        margin-top: 15px;
         display: flex;
-        align-items: center;
-        gap: 20px;
+        gap: 5px;
 
-        .user-icon {
-            border-radius: 50%;
-            background-color: #aaa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $white;
-            font-size: 2rem;
-            margin-top: 4px;
+        p {
+            font-weight: bold;
+            padding-top: 5px;
         }
+    }   
 
-        .rating {
-            display: flex;
-            gap: 5px;
-
-            p {
-                font-weight: bold;
-                padding-top: 5px;
-            }
-        }   
-    }
     .more {
         position: absolute;
         bottom: 0;

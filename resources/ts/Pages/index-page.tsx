@@ -1,25 +1,30 @@
 import { Container, Grid }  from "@mui/material";
-import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
 import NavBar from '../Components/nav-bar';
 import SidebarMenu from '../Components/sidebar-menu';
 import BookSearch from '../Components/book-search';
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import ReviewThumbnailCard from "../Components/review-thumbnail-card";
 import BookCard from "../Components/book-card";
+import Footer from "../Components/footer";
+import { enumType } from "../types";
 
 const IndexPage = () => {
     useEffect(() => {   
         getRecentlyAddedReviewsData();
+        getPopularBooksData();
     }, []);
     
-    const [books, setBooks] = useState([]);
+    const [popularBooks, setPopularBooks] = useState([]);
     const [reviews, setReviews] = useState([]);
 
-    
     const getRecentlyAddedReviewsData = () => {
         axios
-            .get("/api/reviews/recent")
+            .get("/api/reviews/recent", {
+                params: {
+                    limit: 5,
+                }
+            })
             .then(res => {
             setReviews(res.data);
             })
@@ -30,9 +35,14 @@ const IndexPage = () => {
 
     const getPopularBooksData = () => { 
         axios
-            .get("/api/books/popular")
+            .get("/api/reviews/popular", {
+                params: {
+                    limit: 5,
+                }
+            })
             .then(res => {
-            setBooks(res.data);
+            setPopularBooks(res.data);
+            console.log(res.data);
             })
             .catch(err => {
                 console.log(err);
@@ -62,9 +72,9 @@ const IndexPage = () => {
                 <div className="list popular-books">
                 <h2>Popular Books</h2>
                     <Grid container spacing={2}>
-                        {books.map((book: any) => (
-                            <Grid item xs={12} sm={6} md={4} lg={3} key={review.id}>
-                                <BookCard book={book} />
+                        {popularBooks.map((bookData: any, index) => (
+                            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                                <BookCard book={bookData.book} type={enumType.popular}/>
                             </Grid>
                         ))}
                     </Grid>
@@ -73,6 +83,7 @@ const IndexPage = () => {
                     </div>
                 </div>
             </Container>
+            <Footer />
         </>
     );
 }

@@ -1,12 +1,8 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Rating } from "@mui/material";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 interface ReviewProps {
     review: {
         rating: number,
-        // authors: string,
-        // image_link: string,
-        // link: string,
         book: {
             title: string,
             authors: string,
@@ -20,20 +16,9 @@ interface ReviewProps {
     }
 }
 
-
 const ReviewThumbnailCard:React.FC<ReviewProps> = ({ review }) => {
     return (
-        <Card className="review-card" 
-                sx={{
-                    height: "400px",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    margin: "10px",
-                    padding: "10px",
-                    borderRadius: "0",
-        }}>
+        <Card className="card review-thumbnail-card">
             <CardMedia
                 component="img"
                 height="200"
@@ -48,21 +33,18 @@ const ReviewThumbnailCard:React.FC<ReviewProps> = ({ review }) => {
                         <p className="text-overflow-ellipsis">{review.book.authors}</p>
                     </div>
                     <div className="rating-container">
-                        <AccountCircleIcon className="user-icon"/>
-                        <div>
-                            <div className="rating"> 
-                                <p>{review.rating}</p>
-                                <Rating name="read-only" value={review.rating} precision={0.5} readOnly />
-                            </div>
-                            <p className="text-overflow-ellipsis">
-                                by <a href={`/user/${review.user.id}`}>{review.user.name}</a>
-                            </p>
+                        <div className="rating"> 
+                            <p>{review.rating}</p>
+                            <Rating name="read-only" value={review.rating} precision={0.5} readOnly />
                         </div>
+                        <p className="text-overflow-ellipsis">
+                            by <a href={`/user/${review.user.id}`}>{review.user.name}</a>
+                        </p>
                     </div>
                 </CardContent>
-                <CardActions sx={{justifyContent: "center", padding:"0"}}>
-                    <Button size="small" href={review.book.link}>Check Book</Button>
-                    <Button size="small" >Check Review</Button>
+                <CardActions className="btn-container" sx={{justifyContent: "center", padding:"0"}}>
+                    <Button className="btn" size="small" variant="outlined" href={review.book.link}>Check Book</Button>
+                    <Button className="btn" size="small" variant="outlined" >Check Review</Button>
                 </CardActions>
             </div>
             
