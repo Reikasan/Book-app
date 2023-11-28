@@ -22,11 +22,12 @@ a {
 
         &-title {
             overflow: hidden;
+            display: -webkit-box;
             text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
         }
     }
-    
-
 }
 
 .nav {
@@ -51,6 +52,7 @@ a {
 
 .sidebar-menu {
     z-index: 100;
+    min-width: 50px;
     width: 5vw;
     position: fixed;
     top: calc(50% - 50px);
@@ -133,14 +135,17 @@ a {
 }
 
 .list {
-    margin-top: 50px;
-    height: 500px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin: 50px 0;
     position: relative;
 
-    &.added-recently {
-        height: 560px;
+    &.shrink {
+        height: 500px;
+        overflow: hidden;
+        
+
+        &.added-recently {
+            height: 560px;
+        }
     }
 
     &-container {
@@ -194,4 +199,13 @@ a {
         bottom: 0;
         right: 0;
     }
+}
+
+.footer {
+    height: 100px;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
 }

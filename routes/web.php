@@ -24,9 +24,18 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
-Route::get('/guest', function() {
-    return Inertia::render('index-page');
+Route::prefix('/guest')->group(function () {
+    Route::get('/', function() {
+        return Inertia::render('index-page');
+    });
+    Route::get('/recent-added', function() {
+        return Inertia::render('recent-page');
+    });
+    Route::get('/popular', function() {
+        return Inertia::render('popular-page');
+    });
 });
+
 
 
 Route::middleware('auth')->group(function () {

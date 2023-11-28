@@ -69,7 +69,7 @@ class ReviewController extends Controller
     public function getRecentReviews(Request $request)
     {
         $input = $request->validate([
-            'limit' => 'integer|min:1|max:10|nullable'
+            'limit' => 'integer|min:1|max:20|nullable'
         ]);
         $reviews = Review::with(['book', 'user'])->orderBy('created_at', 'desc')->get();
 
@@ -82,9 +82,9 @@ class ReviewController extends Controller
 
     public function getPopularBooks(Request $request) {
         $input = $request->validate([
-            'limit' => 'integer|min:1|max:10|nullable'
+            'limit' => 'integer|min:1|max:20|nullable'
         ]);
-        
+
         $popularBooks = Review::with('book')->select(['book_id', 'book_id' => DB::raw('count(*) as total'), 'rating' => DB::raw('avg(rating) as rating')])
             ->groupBy('book_id')
             ->orderByDesc('total')

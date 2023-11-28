@@ -29,7 +29,7 @@ const ReviewThumbnailCard:React.FC<ReviewProps> = ({ review }) => {
             <div>
                 <CardContent>
                     <div className="book-info">
-                        <h3 className="text-overflow-title">{review.book.title}</h3>
+                        <h3 className="text-overflow-ellipsis-title">{review.book.title}</h3>
                         <p className="text-overflow-ellipsis">{review.book.authors}</p>
                     </div>
                     <div className="rating-container">

@@ -2,6 +2,8 @@ import { Button, TextField } from "@mui/material";
 import useSearch from "../Hooks/useSearch";
 import BookCard from "./book-card";
 
+import { enumType } from "../types";
+
 const BookSearch: React.FC = () => {
     const { handleNewBooks, searchBooks, value, items } = useSearch();
 
@@ -28,7 +30,7 @@ const BookSearch: React.FC = () => {
             </form>
             <div className="book-search-results">
                 {items.map((book: any) => (
-                    <BookCard book={book} key={book.id} />
+                    <BookCard book={book} type={enumType.search} key={book.id} />
                     // <div className="book-search-result" key={book.id}>
 
                     //     <img src={book.imageLinks} alt={book.title} />

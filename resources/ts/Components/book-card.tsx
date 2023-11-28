@@ -20,7 +20,7 @@ const BookCard:React.FC<BookProps> = ({ book, type }) => {
             <div>
                 <CardContent>
                     <div className="book-info">
-                        <h3>{book.title}</h3>
+                        <h3 className="text-overflow-ellipsis-title">{book.title}</h3>
                         <p>{book.authors}</p>
                     </div>
                 </CardContent>
