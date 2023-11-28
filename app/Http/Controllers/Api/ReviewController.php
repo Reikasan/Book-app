@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Review;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        //
+        $reviews = Review::with('book')->get();
+        return response()->json($reviews, 200);
     }
 
     /**
@@ -61,5 +63,11 @@ class ReviewController extends Controller
     public function destroy(Review $review)
     {
         //
+    }
+
+    public function getRecentReviews(Request $request)
+    {
+        $reviews = Review::with(['book', 'user'])->orderBy('created_at', 'desc')->take(5)->get();
+        return response()->json($reviews, 200);
     }
 }

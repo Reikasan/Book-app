@@ -14,7 +14,6 @@ const BookCard:React.FC<BookProps> = ({ book }) => {
     return (
         <Card className="book-card" 
                 sx={{
-                    width: "300px",
                     height: "400px",
                     display: "flex",
                     flexDirection: "column",

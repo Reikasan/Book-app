@@ -10,6 +10,25 @@ $blue: #235789;
     font-family: 'Poppins', sans-serif;
 }
 
+a {
+    color: $blue;
+}
+
+.text-overflow {
+    &-ellipsis {   
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    
+
+}
+
 .nav {
     position: relative;
 
@@ -31,7 +50,7 @@ $blue: #235789;
 }
 
 .sidebar-menu {
-    width: 50px;
+    width: 5vw;
     position: fixed;
     top: calc(50% - 50px);
     right: 0;
@@ -46,7 +65,7 @@ $blue: #235789;
 
     svg {
         width: 1.5em;
-        height: 1.5em;
+        height: 2em;
         color: $pink;
     }
 }
@@ -104,4 +123,66 @@ $blue: #235789;
         align-items: center;
     }
     
+}
+
+.book-info {
+    margin-bottom: 15px;
+    
+
+    h3 {
+        height: 45px;
+    }
+}
+
+.list {
+    margin-top: 50px;
+    height: 480px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+
+    &-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .review-card {
+        > div {
+            width: 100%;
+        }
+    }
+
+    .rating-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .user-icon {
+            border-radius: 50%;
+            background-color: #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+            font-size: 2rem;
+            margin-top: 4px;
+        }
+
+        .rating {
+            display: flex;
+            gap: 5px;
+
+            p {
+                font-weight: bold;
+                padding-top: 5px;
+            }
+        }   
+    }
+    .more {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }

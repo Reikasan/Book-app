@@ -20,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware'=> 'api'], function(){
     Route::get('books', 'App\Http\Controllers\Api\BookController@index');
+    Route::prefix('reviews')->group(function() {
+        Route::resource('reviews', 'App\Http\Controllers\Api\ReviewController');
+        Route::get('/recent', 'App\Http\Controllers\Api\ReviewController@getRecentReviews');
+    });
     // Route::resource('tags', 'App\Http\Controllers\Api\TagController');
     // Route::resource('review-tags', 'App\Http\Controllers\Api\ReviewTagController');
 });
