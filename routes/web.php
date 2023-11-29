@@ -28,7 +28,7 @@ Route::prefix('/guest')->group(function () {
     Route::get('/', function() {
         return Inertia::render('index-page');
     });
-    Route::get('/recent-added', function() {
+    Route::get('/recently-added', function() {
         return Inertia::render('recent-page');
     });
     Route::get('/popular', function() {

@@ -66,7 +66,7 @@ const IndexPage = () => {
                         ))}
                     </Grid>
                     <div className="more">
-                        <a href="/guest/recent-added">See more</a>
+                        <a href="/guest/recently-added">See more</a>
                     </div>
                 </div>
                 <div className="list shrink popular-books">
