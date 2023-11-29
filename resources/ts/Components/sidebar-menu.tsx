@@ -13,8 +13,8 @@ const SidebarMenu: React.FC<NavBarProps> = ({isUserPage}) => {
     return (
         <div className="sidebar-menu">
             <Link to="/guest"><HomeIcon /></Link>
-            <Link to="/guest"><CreateIcon /></Link>
-            <Link to="/guest#list"><LocalLibraryIcon /></Link>
+            <Link to="/guest/add-review"><CreateIcon /></Link>
+            <Link to="/guest/recently-added"><LocalLibraryIcon /></Link>
         { !isUserPage ?
             <Link to="/guest#register"><PersonAddIcon /></Link>
         :

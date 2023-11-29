@@ -42,7 +42,6 @@ const IndexPage = () => {
             })
             .then(res => {
             setPopularBooks(res.data);
-            console.log(res.data);
             })
             .catch(err => {
                 console.log(err);
